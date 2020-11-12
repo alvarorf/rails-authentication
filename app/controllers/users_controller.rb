@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @post = Post.new
+    @user = User.new
   end
 
   # GET /users/1/edit
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @post = User.new(post_params)
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
-      if @user.update(post_params)
+      if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
