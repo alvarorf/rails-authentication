@@ -12,8 +12,8 @@ module PostsHelper
   end
 
   def destroy_button(post)
-    if user_signed_in?
-      link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger text-white mb-2'
-    end
+    return unless user_signed_in?
+
+    link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
   end
 end
