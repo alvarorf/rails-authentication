@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Members-only</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+    <p class="navbar-text float-right">
+        <%= username_if_log_in(current_user) %>
+        <%= sign_up %>
+        <%= new_post %>
+        <%= log_out %>
+    </p>
+    <%= yield %>
+</body>
+
+</html>
