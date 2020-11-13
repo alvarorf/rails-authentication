@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
-  # before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: [:new, :create]
 
   # GET /posts
   # GET /posts.json
@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @posts = Post.find(params[:id])
+    set_post
   end
 
   # GET /posts/new
@@ -20,7 +20,9 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit; end
+  def edit
+    set_post
+  end
 
   # POST /posts
   # POST /posts.json
@@ -55,6 +57,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    set_post
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }

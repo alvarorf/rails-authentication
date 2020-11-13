@@ -17,6 +17,7 @@
        <td><%= post.body %></td>
        <td><%= link_to 'Show', posts_path(post.id) %></td>
        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       <td><%= edit_button(@posts) %></td>
       </div>
       </tr>
     <% end %>
