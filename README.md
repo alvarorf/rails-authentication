@@ -1,5 +1,7 @@
 # Ruby on Rails Members Only
 
+![screenshot](/images/screenshot.png)
+
 > Welcome to our **Ruby on Rails Members Only** project built mainly with `Ruby` and `Ruby on Rails`, but also using the `devise` gem for authentication. The main purpose of this project is to implement an authentication system where only authorized users can create a post and edit their previous posts. We used the `devise` gem and many of its helper functions to facilitate the authentication process. Posts can be created and edited only by authorized users.
 
 ### Built With
