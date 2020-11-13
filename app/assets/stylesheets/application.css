@@ -15,6 +15,35 @@
  */
 
 body {
-  background-color: yellow;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
   color: rgb(9, 9, 63);
+}
+
+.navbar-text {
+  display: inline-block;
+}
+
+.navbar-link {
+  width: 50%;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+a:hover {
+  color: rgb(11, 0, 71)!important;
+  background-color: rgba(202, 201, 201, 0.02) !important;
+}
+
+table {
+  width: 100%;
+  background-color: rgba(208, 245, 251, 0.209);
 }
