@@ -19,7 +19,8 @@ Assuming that `Bundler` is installed, you can continue with the following steps:
 - Step 1: Clone this repository. Just use: `git clone https://github.com/alvarorf//`.
 - Step 2: Open the project folder where the repository was downloaded. Once you are in that folder, open a terminal and make sure that it will be opened in that specific folder.
 - Step 3: Once you are in the terminal, just type in: `bundle install`. This will install the required dependencies for this project.
-- Step 4: Now, you need to run the migrations. To do this, while in the project root folder type in: `rails db:migrate`.
+- Step 4: Now, type in: `yarn install --check-files` to install some necessary packages.
+- Step 4: (Optional) You may need to run the migrations. To do this, while in the project root folder type in: `rails db:migrate`.
 - Step 5: Now, to try the project type in: `rails server` and then go to `localhost:3000`. There, you will be able to see the current posts. However, in order to be able to post you will need to register first. To do so, go to `localhost:3000/users/sign_up` or simply click in `sign_up` and enter your data (make sure that you type in a valid email address, a user longer than 3 characters and a password of at least 8 characters).
 - If you want to edit a user, you can do so by login in and then click in *edit profile*.
 
